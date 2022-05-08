@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Courses</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+::selection{
+background: rgb(0,123,255,0.3);
+}
+nav{
+  display: flex;
+  height: 80px;
+  width: 100%;
+  background: #1b1b1b;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 50px 0 100px;
+  flex-wrap: wrap;
+
+  position: fixed;
+  z-index: 1;
+}
+nav .logo{
+  color: #fff;
+  font-size: 35px;
+  font-weight: 600;
+}
+nav img{
+    width: 36px;
+    height: 27px;
+}
+nav a{
+    text-decoration: none;
+    color: #fff;
+}
+nav ul{
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+}
+nav ul li{
+  margin: 0 5px;
+}
+nav ul li a{
+  color: #f2f2f2;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 500;
+  padding: 8px 15px;
+  border-radius: 5px;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+}
+nav ul li a.active,
+nav ul li a:hover{
+  color: #111;
+  background: #fff;
+}
+nav .menu-btn i{
+  color: #fff;
+  font-size: 22px;
+  cursor: pointer;
+  display: none;
+}
+input[type="checkbox"]{
+  display: none;
+}
+.banner-area{
+    background-image: url(courses.jpg);
+    background-size: cover;
+    background-position: center center;
+    top:12%;
+    height: 500px;
+    width: 100%;
+    position: fixed;
+}
+.banner-area::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: black;
+    opacity: .6;
+    z-index: -1;
+}
+.banner-area h2{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-align: center;
+    padding-top: 10%;
+    font-size: 68px;
+    color: #fff;
+}
+.banner-area p{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-align: center;
+    font-size: 25px;
+    color: #fff;
+}
+.wrapper{
+    width: 90%;
+    margin: 0 auto;
+}
+.content-area{
+    width: 100%;
+    top: 450px;
+    position: relative;
+    background: #fff;
+    top: 550px;
+    display: flex;
+}
+.wrapper img{
+  float: left;
+  width: 15%;
+  height: 2%;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+.content-area h2{
+    text-align: center;
+    font-size: 40px;
+    margin: 0;
+    padding-top: 30px;
+    letter-spacing: 2px;
+}
+.content-area h3{
+  text-align: center;
+  font-size: 30px;
+  margin: 0;
+  padding-top: 30px;
+  letter-spacing: 2px;
+}
+.content-area p{
+    padding: 0 2%;
+    line-height: 30px;
+    text-align: center;
+}
+.wrapper-a h3{
+  text-align: center;
+  font-size: 30px;
+  margin: 0;
+  padding-top: 30px;
+  letter-spacing: 2px;
+}
+.wrapper-a p{
+    padding: 0 2%;
+    line-height: 30px;
+    text-align: center;
+}
+.wrapper-area h3{
+  text-align: center;
+  font-size: 30px;
+  margin: 0;
+  padding-top: 30px;
+  letter-spacing: 2px;
+}
+.wrapper-area p{
+    padding: 0 2%;
+    line-height: 30px;
+    text-align: center;
+}
+.wrapper-aa h3{
+  text-align: center;
+  font-size: 30px;
+  margin: 0;
+  padding-top: 30px;
+  letter-spacing: 2px;
+}
+.wrapper-aa p{
+    padding: 0 2%;
+    line-height: 30px;
+    text-align: center;
+}
+.wrapper-aaa h3{
+  text-align: center;
+  font-size: 30px;
+  margin: 0;
+  padding-top: 30px;
+  letter-spacing: 2px;
+}
+.wrapper-aaa p{
+    padding: 0 2%;
+    line-height: 30px;
+    text-align: center;
+}
+.foot p{
+  text-align: center;
+  font-size: 12px;
+  width: 100%;
+}
+@media (max-width: 1000px){
+  nav{
+    padding: 0 40px 0 50px;
+  }
+}
+@media (max-width: 920px) {
+  nav .menu-btn i{
+    display: block;
+  }
+  #click:checked ~ .menu-btn i:before{
+    content: "\f00d";
+  }
+  nav ul{
+    position: fixed;
+    top: 80px;
+    left: -100%;
+    background: #111;
+    height: 100vh;
+    width: 100%;
+    text-align: center;
+    display: block;
+    transition: all 0.3s ease;
+  }
+  #click:checked ~ ul{
+    left: 0;
+  }
+  nav ul li{
+    width: 100%;
+    margin: 40px 0;
+  }
+  nav ul li a{
+    width: 100%;
+    margin-left: -100%;
+    display: block;
+    font-size: 20px;
+    transition: 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+  #click:checked ~ ul li a{
+    margin-left: 0px;
+  }
+  nav ul li a.active,
+  nav ul li a:hover{
+    background: none;
+    color: rgb(63, 120, 243);
+  }
+}
+  </style>
+  </head>
+  <body>
+	  <header class="header">
+    <nav>
+      <div class="logo"><img src="Logo.png">&nbsp;<a href="index.html">PCNL</a></div>
+      <input type="checkbox" id="click">
+      <label for="click" class="menu-btn">
+        <i class="fas fa-bars"></i>
+      </label>
+      <ul>
+        <li><a href="home.html">Home</a></li>
+        <li><a href="courses.html">Courses</a></li>
+        <li><a href="admission.html">Admission</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+      </ul>
+    </nav>
+    <div class="banner-area">
+        <h2>Philippine College Of <br>Northwestern Luzon</h2>
+        <p><em><i>"An Investment in Knowledge Pays the Best Interest"</i></em></p>
+    </div>
+	</header>
+    <div class="content-area">
+        <div class="wrapper">
+            <h2>COURSES</h2><br><br>
+            <h3><img src="bsa.jpg"> Bachelor of Science in Accountancy</h3><br>
+            <p>
+                Organization Name:  Junior Philippine Institute of Accountants
+            </p><br><br><br><br>
+                <div class="wrapper-a">
+                    <h3></h3><br>
+                    <h3><img src="bsba.gif"> Bachelor of Science in Business Administration</h3><br>
+                    <p>
+                        MAJORS:<br><br>
+                        &nbsp;Financial Management | Human Resources Development and Management
+                    </p>
+                    <div class="wrapper-aa">
+                        <h3></h3><br><br><br><br>
+                        <h3><img src="crim.jpg"> Bachelor of Science in Criminology</h3><br><br><br><br>
+                    <div class="wrapper-aaa">
+                        <h3></h3><br><br><br><br><br>
+                        <h3><img src="educ.gif"> Bachelor in Elementary Education  | <br>Bachelor in Secondary Education</h3><br>
+                        <p>
+                            MAJORS:<br>
+                            &nbsp;Filipino | English
+                        </p>
+                        <div class="wrapper-area">
+                            <h3></h3><br><br><br><br>
+                            <h3><img src="bsit.png"> Bachelor of Information Technology</h3><br>
+                            <p>
+                                Organization Name: Junior Information Technology Students
+                            </p><br><br>
+        </div><br><br><br><br><br><br>
+        <footer class="foot">
+          <p> Copyright 2021 | Philippine College of Northwestern Luzon</p><br>
+    </footer>
+    </div>
+  </body>
+</html>
